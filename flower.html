@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+ 
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+
+    .wrapper {
+  padding: 10px 10%;
+  margin-bottom: 50px;
+  
+}
+#card-area {
+  padding: 50px 0;
+}
+.box-area {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-top: 50px;
+  gap: 40px;
+}
+.box-area2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-top: 50px;
+  gap: 40px;}
+.box-area3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-top: 50px;
+  gap: 40px; 
+}
+.box-area4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-top: 50px;
+  gap: 40px; 
+}
+#area {
+  display:;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-top: 50px;
+  gap: 40px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.box {
+
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 5px 5px 15px rgba(220, 10, 108, 0.607);
+}
+.box-img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.5s;
+}
+.overlay {
+  height: 0;
+  width: 100%;
+  background: linear-gradient(transparent, #1c1c1c 70%);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;  /* align content at the bottom */
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  text-align: center;
+  font-size: 15px;
+  transition: height 0.5s;
+}
+
+.overlay h3 {
+  font-weight: 700;
+  margin: 0;   /* remove huge margin-top */
+  font-family: 'Dancing Script', cursive;
+  font-size: 100px;
+  letter-spacing: 2px;
+  color: #0d0505;
+}
+
+.overlay p {
+  font-size: 40px;
+  color: #ffffffc9;
+  margin-top: 5px;
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+}
+.overlay a {
+  display: inline-block;
+  margin-top: ;
+}
+
+
+.box:hover .overlay {
+  height: 100%;
+}
+
+.box:hover img { transform: scale(1.2); }
+.box:hover .overlay { height: 100%; }
+#flower{ 
+    text-align: center;
+    font-size: 50px;
+    background-color: pink;
+    border: 5px solid rgb(234, 8, 121);
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+
+
+
+
+</style>
+<body>
+      <div id="flower">Flowers Section 
+    <p class="sub">Discover meanings & stories behind beautiful flowers.</p>
+  </div>
+
+
+  <!-- Flower Section -->
+   <div id="area">
+ 
+    <div class="wrapper">
+      <div class="box-area">
+        <div class="box">
+          <img src="lotus.jpg" alt="Lotus" class="box-img">
+          <div class="overlay">
+            <h3>Lotus</h3>
+            <p>Symbol of purity and enlightenment</p>
+          </div>
+        </div>
+        <div class="box">
+          <img src="rose.jpeg" alt="Rose" class="box-img">
+          <div class="overlay">
+            <h3>Rose</h3>
+            <p>Represents love and passion</p>
+          </div>
+        </div>
+        <div class="box">
+          <img src="pic4.jpg" alt="Sunflower" class="box-img">
+          <div class="overlay">
+            <h3>Sunflower</h3>
+            <p>Symbol of happiness and warmth</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+  <!--Flower Part2-->
+   <div id="card-area2">
+    <div class="wrapper">
+      <div class="box-area">
+        <div class="box">
+          <img src="daisy.jpg" alt="Daisy" class="box-img">
+          <div class="overlay">
+            <h3>Daisy</h3>
+            <p>Symbol of purity and enlightenment</p>
+          </div>
+        </div>
+        <div class="box">
+          <img src="Tulip.jpg" alt="Tulip" class="box-img">
+          <div class="overlay">
+            <h3>Tulip</h3>
+            <p>Represents love and passion</p>
+          </div>
+        </div>
+        <div class="box">
+          <img src="lavender.jpg" alt="lavender" class="box-img">
+          <div class="overlay">
+            <h3>Lavender</h3>
+            <p>Symbol of happiness and warmth</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--Flower part3-->
+  <div id="card-area3">
+    <div class="wrapper">
+      <div class="box-area">
+        <div class="box">
+          <img src="hibiscus.jpg" alt="hibiscus" class="box-img">
+          <div class="overlay">
+            <h3>Hibiscus</h3>
+            <p>Symbol of purity and enlightenment</p>
+          </div>
+        </div>
+        <div class="box">
+          <img src="bluebell.jpg" alt="bluebell" class="box-img">
+          <div class="overlay">
+            <h3>Bluebell</h3>
+            <p>Represents love and passion</p>
+          </div>
+        </div>
+        <div class="box">
+          <img src="jasmine.jpg" alt="Jasmine" class="box-img">
+          <div class="overlay">
+            <h3>Jasmine</h3>
+            <p>Symbol of happiness and warmth</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--part4-->
+  <div id="card-area3">
+    <div class="wrapper">
+      <div class="box-area">
+        <div class="box">
+          <img src="marigold.jpg" alt="marigold" class="box-img">
+          <div class="overlay">
+            <h3>marigold</h3>
+            <p>Symbol of purity and enlightenment</p>
+          </div>
+        </div>
+        <div class="box">
+          <img src="lilly.jpg" alt="lilly" class="box-img">
+          <div class="overlay">
+            <h3>Lilly</h3>
+            <p>Represents love and passion</p>
+          </div>
+        </div>
+        <div class="box">
+          <img src="pic4.jpg" alt="Sunflower" class="box-img">
+          <div class="overlay">
+            <h3>Sunflower</h3>
+            <p>Symbol of happiness and warmth</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>  
+
+    
+</body>
+</html>

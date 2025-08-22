@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cards with Music</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(235, 71, 194, 0.585);
+  font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+}
+    
+    .title{
+        justify-content: center;
+        text-align: center;
+        font-size: 80px;
+        font-weight: 600;
+        background-color: rgba(87, 163, 46, 0.699);
+        border-radius: 20px;
+        font-family: 'dancing script', cursive;
+        border: 5px solid goldenrod;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgb(4, 0, 3);
+       margin-top:20px;
+
+    }
+    .sub-title{ justify-content: center;
+        text-align: center;
+        font-size: 40px;
+        font-weight: 300;
+        
+        border-radius: 20px;
+        font-family: 'dancing script', cursive;
+
+
+    }
+
+    /* container */
+    .cards-container {
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* single card */
+    .card {
+      width: 100%;
+      height: 520px;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 8px solid whitesmoke;
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+
+    .card-body {
+      width: 100%;
+      height: 100%;
+      top: 0;
+      right: -100%;
+      position: absolute;
+      background-color: rgba(105, 5, 80, 0.381);
+      backdrop-filter: blur(5px);
+      border-radius: 5px;
+      padding: 30px;
+      color: rgb(236, 236, 236);
+      display: flex;
+      flex-direction: column;
+      transition: 0.5s;
+      font-family: 'dancing script', cursive;
+      font-size: 40px;
+    }
+
+    .card:hover .card-body {
+      right: 0;
+    }
+
+    .card-tittle {
+      text-transform: uppercase;
+      font-size: 60px;
+      font-weight: 500;
+    }
+
+    .card-sub-tittle {
+      text-transform: capitalize;
+      font-size: 14px;
+      font-weight: 300;
+    }
+
+    .card-info {
+      font-size: 30px;
+      line-height: 25px;
+      margin: 15px 0;
+    }
+
+    .card-btn {
+      color: rgb(250, 250, 250);
+      background: rgb(255, 0, 183);
+      padding: 10px;
+      border-radius: 20px;
+      text-transform: capitalize;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      width: 120px;
+      margin-bottom: 10px;
+    }
+
+    audio {
+      width: 100%;
+      border-radius: 8px;
+      outline: none;
+    }
+
+    /* Responsive horizontal scroll on small screens */
+    @media (max-width: 768px) {
+      .cards-container {
+        display: flex;
+        overflow-x: auto;
+        gap: 20px;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 20px;
+      }
+
+      .card {
+        width: 80%;
+        scroll-snap-align: center;
+      }
+
+      .cards-container::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+ 
+         <div class="title">✨ When the Music Meets the Flower Vibes ✨</div>
+
+         <div class="sub-title">“Where melodies bloom like flowers” 🌸</div>
+    
+    
+    
+    
+  <div class="cards-container">
+
+  <div class="card">
+    <img src="lotus.jpg" alt="Lotus" class="card-img">
+    <div class="card-body">
+      <h1 class="card-tittle">Lotus</h1>
+      <p class="card-sub-tittle">spiritual awakening</p>
+      <p class="card-info">A symbol of purity and calm rising from the still waters.</p>
+   <a href="playlist0.html"><button class="card-btn">🌸 Inner Peace</button></a>
+      
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="Tulip.jpg" alt="Tulip" class="card-img">
+    <div class="card-body">
+      <h1 class="card-tittle">Tulip</h1>
+      <p class="card-sub-tittle">joyful beginnings</p>
+      <p class="card-info">Bright colors that welcome the spring and new hopes.</p>
+      <a href="playlist2.html"><button class="card-btn">🌷 Fresh Beginnings</button></a>
+      
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="sunflower-39.jpg" alt="Sunflower" class="card-img">
+    <div class="card-body">
+      <h1 class="card-tittle">Sunflower</h1>
+      <p class="card-sub-tittle">sun-kissed happiness</p>
+      <p class="card-info">Always turning towards the light, spreading warmth and cheer.</p>
+      <a href="playlist1.html"><button class="card-btn">🌻 Enter the Bloom</button></a>
+      
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="daisy.jpg" alt="Daisy" class="card-img">
+    <div class="card-body">
+      <h1 class="card-tittle">Daisy</h1>
+      <p class="card-sub-tittle">innocence & simplicity</p>
+      <p class="card-info">Fresh and pure, a reminder of childhood joy and peace.</p>
+      <button class="card-btn">book tour</button>
+      
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="lilly.jpg" alt="Lily" class="card-img">
+    <div class="card-body">
+      <h1 class="card-tittle">Lily</h1>
+      <p class="card-sub-tittle">elegance & renewal</p>
+      <p class="card-info">Graceful and fragrant, lilies bloom with refined beauty.</p>
+      <button class="card-btn">book tour</button>
+      
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="jasmine.jpg" alt="Jasmine" class="card-img">
+    <div class="card-body">
+      <h1 class="card-tittle">Jasmine</h1>
+      <p class="card-sub-tittle">romance & tranquility</p>
+      <p class="card-info">A delicate fragrance that fills the night with calmness.</p>
+      <button class="card-btn">book tour</button>
+      
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="marigold.jpg" alt="Marigold" class="card-img">
+    <div class="card-body">
+      <h1 class="card-tittle">Marigold</h1>
+      <p class="card-sub-tittle">energy & celebration</p>
+      <p class="card-info">Vibrant orange and gold flowers that brighten every festival.</p>
+      <button class="card-btn">book tour</button>
+     >
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="hibiscus.jpg" alt="Hibiscus" class="card-img">
+    <div class="card-body">
+      <h1 class="card-tittle">Hibiscus</h1>
+      <p class="card-sub-tittle">tropical vitality</p>
+      <p class="card-info">Bold and striking, blooming under the bright summer sun.</p>
+      <button class="card-btn">book tour</button>
+      
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="rose.jpeg" alt="Rose" class="card-img">
+    <div class="card-body">
+      <h1 class="card-tittle">Rose</h1>
+      <p class="card-sub-tittle">love & passion</p>
+      <p class="card-info">Timeless symbol of romance, beauty, and heartfelt emotions.</p>
+      <button class="card-btn">book tour</button>
+      
+    </div>
+  </div>
+
+</div>

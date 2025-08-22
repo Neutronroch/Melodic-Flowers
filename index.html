@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melodic Flower 🌸</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .back {
+            background-image: url(beige.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 0.9;
+        }
+
+        /* Header */
+        #container {
+            font-family: 'Dancing Script', cursive;
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(155, 56, 130, 0.241);
+            border-radius: 50px;
+            box-shadow: 5px 5px 10px rgba(180, 4, 121, 0.728);
+            font-size: 50px;
+        }
+
+        .title {
+            font-size: 100px;
+            text-align: center;
+        }
+
+        .subtitle {
+            font-size: 40px;
+            margin-top: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* General Card */
+        .card {
+            background: pink;
+            margin: 15px auto;
+            padding: 20px;
+            height: auto;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+            font-size: 18px;
+        }
+
+        /* Sidebar */
+        .slide {
+            height: 100%;
+            width: 200px;
+            position: absolute;
+            background-color: rgba(206, 103, 120, 0.528);
+            transition: 0.5s ease;
+            transform: translateX(-200px);
+            top: 0;
+            left: 0;
+            overflow: hidden;
+        }
+
+        .slide h1 {
+            color: #000;
+            font-weight: 800;
+            text-align: right;
+            padding: 10px 30px 10px 0;
+            pointer-events: none;
+        }
+
+        .slide ul li {
+            list-style: none;
+            opacity: 0;
+            transform: translateX(-30px);
+        }
+
+        .slide ul li a {
+            color: black;
+            font-weight: 500;
+            padding: 10px;
+            display: block;
+            text-transform: capitalize;
+            text-decoration: none;
+            transition: 0.2s ease-out;
+        }
+
+        .slide ul li:hover a {
+            color: #fff;
+            background-color: pink;
+        }
+
+        .slide ul li a i {
+            width: 30px;
+            text-align: center;
+        }
+
+        /* Hide checkbox */
+        input {
+            display: none;
+            visibility: hidden;
+            -webkit-appearance: none;
+        }
+
+        /* Hamburger button */
+        .toggle {
+            position: absolute;
+            height: 30px;
+            width: 30px;
+            top: 20px;
+            left: 15px;
+            z-index: 1;
+            cursor: pointer;
+            border-radius: 2px;
+            background-color: black;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .toggle .common {
+            position: absolute;
+            height: 2px;
+            width: 20px;
+            background-color: beige;
+            border-radius: 50px;
+            transition: 0.3s ease;
+        }
+
+        .toggle .top_line {
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .toggle .middle_line {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .toggle .bottom_line {
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Transform lines when active */
+        input:checked ~ .toggle .top_line {
+            left: 2px;
+            top: 14px;
+            width: 25px;
+            transform: rotate(45deg);
+        }
+
+        input:checked ~ .toggle .middle_line {
+            opacity: 0;
+            transform: translateX(20px);
+        }
+
+        input:checked ~ .toggle .bottom_line {
+            left: 2px;
+            top: 14px;
+            width: 25px;
+            transform: rotate(-45deg);
+        }
+
+        /* Slide in sidebar */
+        input:checked ~ .slide {
+            transform: translateX(0);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Animation for menu items */
+        @keyframes fadeSlide {
+            from { opacity: 0; transform: translateX(-30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        input:checked ~ .slide ul li {
+            animation: fadeSlide 0.5s forwards;
+        }
+
+        input:checked ~ .slide ul li:nth-child(1) { animation-delay: 0.1s; }
+        input:checked ~ .slide ul li:nth-child(2) { animation-delay: 0.2s; }
+        input:checked ~ .slide ul li:nth-child(3) { animation-delay: 0.3s; }
+        input:checked ~ .slide ul li:nth-child(4) { animation-delay: 0.4s; }
+        input:checked ~ .slide ul li:nth-child(5) { animation-delay: 0.5s; }
+        input:checked ~ .slide ul li:nth-child(6) { animation-delay: 0.6s; }
+        input:checked ~ .slide ul li:nth-child(7) { animation-delay: 0.7s; }
+
+        /* Sections */
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 30px;
+            margin-bottom: 15px;
+            color: #05b37c;
+        }
+
+        /* Flower Gallery */
+        .wrapper { padding: 10px 10%; margin-bottom: 50px; }
+
+        #main-area {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            margin-top: 50px;
+            gap: 40px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .box {
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 5px 5px 15px rgba(220, 10, 108, 0.607);
+        }
+
+        .box-img {
+            width: 100%;
+            border-radius: 10px;
+            display: block;
+            transition: transform 0.5s;
+        }
+
+        .overlay {
+            height: 0;
+            width: 100%;
+            background: linear-gradient(transparent, #1c1c1c 70%);
+            border-radius: 10px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            flex-direction: column;
+            padding: 20px;
+            text-align: center;
+            font-size: 15px;
+            transition: height 0.5s;
+        }
+
+        .overlay h3 {
+            font-weight: 700;
+            margin: 0;
+            font-family: 'Dancing Script', cursive;
+            font-size: 100px;
+            letter-spacing: 2px;
+            color: #0d0505;
+        }
+
+        .overlay p {
+            font-size: 40px;
+            color: #ffffffc9;
+            margin-top: 5px;
+            text-align: center;
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .box:hover .overlay { height: 100%; }
+        .box:hover img { transform: scale(1.2); }
+
+        #flower {
+            text-align: center;
+            font-size: 50px;
+            background-color: pink;
+            border: 5px solid rgb(234, 8, 121);
+            border-radius: 20px;
+            margin: 20px 50px;
+        }
+
+        li { color: white; font-family: 'Dancing Script', cursive; font-size: 20px; }
+
+        footer {
+            background-color: #f8f4f0;
+            text-align: center;
+            padding: 20px;
+            font-family: 'Cursive', sans-serif;
+            color: #555;
+        }
+
+        footer a {
+            color: #ff69b4;
+            text-decoration: none;
+        }
+
+        footer p a { color: #555; }
+    </style>
+</head>
+<body>
+    <div class="back">
+        <!-- Header -->
+        <header id="container">
+            <div class="title">Welcome to <br> Melodic Flower 🌸</div>
+            <div class="subtitle">Blooming through words, melodies & petals</div>
+        </header>
+
+        <!-- Main Content Area -->
+        <div id="main-area">
+            <div class="wrapper">
+                <div class="box-area">
+                    <div class="box">
+                        <img src="background2.avif" alt="Lotus" class="box-img">
+                        <div class="overlay">
+                            <h3>Melodic Flowers 🌸</h3>
+                            <p>
+                                Every flower has a story, 🪻 <br>
+                                Every petal a whisper of beauty.✨✨<br>
+                                At Melodic Flowers🌸, we help you discover the beauty hidden in blooms and share them with your loved ones — not just as gifts,🪷<br>
+                                but as messages from the heart.🫶🏻
+                            </p>
+                            <a href="#">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="flower">Flowers Section</div>
+
+        <!-- About Us Section -->
+        <div id="main-area">
+            <div class="wrapper">
+                <div class="box-area">
+                    <div class="box">
+                        <img src="background2.avif" alt="Lotus" class="box-img">
+                        <div class="overlay">
+                            <h3>About Us🌸</h3>
+                            <p>
+                                Welcome to Melodic Flower 🌸✨ – a place where every flower tells a story and every melody sets the mood.<br>
+                                Discover the beauty and symbolism of your favorite blooms,<br>
+                                enjoy music that matches their vibe, and explore a world where nature and art come together.<br>
+                                From thoughtful gifts to meaningful moments,<br>
+                                Melodic Flower helps you celebrate life, one petal at a time. 🌼🎶
+                            </p>
+                            <a href="#">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Future Plans Section -->
+        <div id="main-area">
+            <div class="wrapper">
+                <div class="box-area">
+                    <div class="box">
+                        <img src="background2.avif" alt="Lotus" class="box-img">
+                        <div class="overlay">
+                            <h3>Future Plans 🌸</h3>
+                            <h2>Future Plans – Melodic Flower 🌸✨</h2>
+                            <p>At Melodic Flower, we’re just getting started! Here’s what’s coming soon:</p>
+                            <ul>
+                                <li><strong>Online Flower Shop 🌼</strong><br> Buy flowers directly from our website, hand-picked for quality and beauty.</li>
+                                <li><strong>Flower Meanings & Guides 📖</strong><br> Learn what each flower symbolizes and choose the perfect bloom for any occasion.</li>
+                                <li><strong>Personalized Flower & Music Pairings 🎶</strong><br> Match flowers with music that fits your mood or the message you want to convey.</li>
+                                <li><strong>Interactive Garden Experience 🌿</strong><br> Explore a virtual garden where you can discover new flowers, their stories, and leave your own thoughts.</li>
+                            </ul>
+                            <p>Our mission is to make <strong>Melodic Flower</strong> more than just a website – a space for inspiration, emotions, and meaningful connections. Stay tuned for a blossoming experience!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sidebar Menu -->
+    <label>
+        <input type="checkbox">
+        <div class="toggle">
+            <span class="top_line common"></span>
+            <span class="middle_line common"></span>
+            <span class="bottom_line common"></span>
+        </div>
+        <div class="slide">
+            <h1>Menu</h1>
+            <ul>
+                <li><a href="Garden.html"><i class="fas fa-cogs"></i> 🌸 Garden</a></li>
+                <li><a href="song.html"><i class="fas fa-user"></i> 🎶 Songs</a></li>
+                <li><a href="flower.html"><i class="fas fa-gripfire"></i> 🌼 Flowers</a></li>
+                <li><a href="THOUGTHS.html"><i class="fas fa-folder"></i> ✍️ Comments</a></li>
+            </ul>
+        </div>
+    </label>
+
+    <!-- Footer -->
+    <footer>
+        <p>🌸 &copy; 2025 <strong>Melodic Flower</strong>. All Rights Reserved.</p>
+        <p>Follow us on <a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">Twitter</a></p>
+        <p><a href="about.html">About Us</a> | <a href="future.html">Future Plans</a> | <a href="contact.html">Contact</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cards</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+   body {
+    width: 100%;
+    min-height: 100vh;
+    background-color:pink;
+    font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;   
+    align-items: center;     
+    padding: 30px 0;          
+}
+
+.card {
+    width: 1500px;   
+    height: 750px;  
+    border-radius: 20px;
+    overflow: hidden;
+    border: 8px solid whitesmoke;
+    position: relative;
+    margin-bottom: 40px; 
+}
+
+
+    .cards-container {
+      padding: 20px;
+    }
+
+
+   
+
+    .card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+
+    .card-body {
+      width: 100%;
+      height: 100%;
+      top: 0;
+      right: -100%;
+      position: absolute;
+      background-color: rgba(204, 228, 232, 0.696);
+      backdrop-filter: blur(5px);
+      border-radius: 5px;
+      padding: 30px;
+      color: aliceblue;
+      display: flex;
+      flex-direction: column;
+      transition: 0.5s;
+    }
+
+    .card:hover .card-body {
+      right: 0;
+    }
+
+    .card-tittle {
+      text-transform: uppercase;
+      font-size: 80px;
+      font-weight: 500;
+      text-align: center;
+      color: rgba(255, 217, 0, 0.801);
+    }
+
+    .card-sub-tittle {
+      text-transform: capitalize;
+      font-size: 20px;
+      font-weight: 300;
+      text-align: center;
+    }
+
+    .card-info {
+      font-size: 30px;
+      line-height: 1.5;
+      margin: 20px 0;
+      font-family: 'dancing script', cursive;
+      color: rgba(200, 3, 174, 0.61);
+      text-align: center;
+    }
+    .symbolize{
+        font-size: 20px;
+        text-align: center;
+        color: black;
+        padding-bottom: 30px;
+
+
+    }
+
+    
+  </style>
+</head>
+<body>
+  <div class="cards-container">
+    <div class="card">
+      <img src="lotus.jpg" alt="image"  class="card-img">
+      <div class="card-body">
+        <h1 class="card-tittle">✨ Lotus – The Bloom of Purity ✨</h1>
+        <p class="card-sub-tittle">peace and calm</p>
+        <p class="card-info">The lotus, rising pure from muddy waters, symbolizes purity, rebirth, and spiritual awakening. <br>Revered in Hinduism, Buddhism, and many cultures, it reflects beauty, resilience, and the journey toward enlightenment.</p>
+        <p class="symbolize">🌸 What It Symbolizes When You Gift a Lotus <br>
+
+Purity of heart and intentions 💖<br>
+
+Blessings of peace, prosperity, and spiritual growth ✨<br>
+
+Encouragement to stay strong in tough times 🌿<br>
+
+Respect and honor 🙏<br>
+
+Hope for renewal and enlightenment 🌞<br>
+
+👉 Unlike roses (which are personal and romantic), the lotus is a sacred and uplifting gift—it conveys purity, good wishes, and respect more than romantic love.
+
+Would you like me to also create a short gift-meaning line (like “When you gift a lotus, you are wishing…”) that you can directly use under a “Gifting Meaning” section on your website?</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="Tulip.jpg" alt="image"  class="card-img">
+      <div class="card-body">
+        <h1 class="card-tittle">🌷 Tulip – Symbol of Love & Happiness</h1>
+        <p class="card-sub-tittle">“Tulips whisper love, joy, and the beauty of new beginnings.</p>
+        <p class="card-info">🌿 Origin & History <br>
+
+Native to Central Asia, tulips became widely popular in the Ottoman Empire and later spread to Europe, especially the Netherlands (which is still famous for tulips today). <br>
+
+In the 17th century, the Netherlands experienced “Tulip Mania”, when tulip bulbs were so valuable they were traded like currency!
+        </p>
+        <p class="symbolize">🎁 When You Give Tulips <br>
+
+Romantic Occasions: Red tulips are a classic declaration of love <br>
+
+Friendship & Joy: Yellow tulips make a cheerful, uplifting gift. <br>
+
+Forgiveness: White tulips can express sincere apologies.<br>
+
+Special Celebrations: Birthdays, anniversaries, or simply to brighten</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="lilly.jpg" alt="image"  class="card-img">
+      <div class="card-body">
+        <h1 class="card-tittle">🌸 Lily – Symbol of Purity & Renewal</h1>
+        <p class="card-sub-tittle">“Lilies bloom with purity, grace, and the promise of renewal.”</p>
+        <p class="card-info">🌿 Origin & History <br>
+
+Lilies (Lilium) are among the oldest cultivated flowers, <br>native to parts of Europe, Asia, and North America <br> 
+Graceful and timeless, lilies symbolize purity, devotion, and the beauty of new beginnings.<br> With colors expressing love, joy, and admiration, they bloom as a flower of elegance and hope.</p>
+      <p class="symbolize">🎁 When You Give Lilies <br>
+
+Weddings: Symbol of purity, union, and commitment.<br>
+
+Sympathy/Funerals: White lilies symbolize the soul’s return to innocence.<br>
+
+Birthdays or Recovery: Yellow lilies brighten moods and wish good health.<br>
+
+Romantic Gestures: Red lilies express deep love and passion.</p>
+      </div>
+    </div>
+  </div>
+  <div class="cards-container">
+    <div class="card">
+      <img src="sunflower-39.jpg" alt="image"  class="card-img">
+      <div class="card-body">
+        <h1 class="card-tittle">🌻 Sunflower – Symbol of Joy & Devotion</h1>
+        <p class="card-sub-tittle">“Sunflowers shine with joy, strength, and unwavering devotion.”</p>
+        <p class="card-info">🌿 Origin & History <br>
+
+Native to North and South America, sunflowers (Helianthus annuus) were cultivated by Native Americans over 4,500 years ago for food, oil, and spiritual rituals.<br>
+
+They later spread worldwide and became symbols of warmth, positivity, and devotion. <br>
+               </p>
+        <p class="symbolize">🎁 When You Give Sunflowers <br>
+
+To Cheer Someone Up: Brings instant happiness and warmth.<br>
+
+Friendship & Appreciation: A perfect way to say “thank you” or “I admire you.”<br>
+
+Encouragement: To remind someone to stay strong and hopeful.<br>
+
+Celebrations: Birthdays, achievements, and housewarmings.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="lavender.jpg" alt="image"  class="card-img">
+      <div class="card-body">
+        <h1 class="card-tittle">💜 Lavender – Symbol of Calm & Healing</h1>
+        <p class="card-sub-tittle">“Lavender whispers calm, healing, and graceful love.”</p>
+        <p class="card-info">🌿 Origin & History<br>
+
+Native to the Mediterranean region, lavender (Lavandula) has been cherished for thousands of years.<br>
+Today, it’s known worldwide for its fragrance, beauty, and calming properties.</p>
+        <p class="symbolize">🎁 When You Give Lavender<br>
+
+To Comfort Someone: Brings peace and emotional healing.<br>
+
+For Relaxation & Care: A thoughtful gift for stress relief.<br>
+
+As a Token of Love: Represents gentle, loyal affection.<br>
+
+Housewarming or New Beginnings: Brings positivity and protection.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="bluebell.jpg" alt="image"  class="card-img">
+      <div class="card-body">
+        <h1 class="card-tittle">🔔 Bluebell – Symbol of Humility & Loyalty</h1>
+        <p class="card-sub-tittle">“Bluebells ring with humility, gratitude, and loyal love.”</p>
+        <p class="card-info">🌿 Origin & History <br>
+
+Native to Western Europe, especially the woodlands of the UK, Spain, and France.<br>
+
+In folklore, bluebells were called “fairy flowers,” believed to ring and summon fairies.</p>
+   <p class="symbolize">🎁 When You Give Bluebells<br>
+
+To Express Gratitude: A gentle way of saying “thank you” with humility.<br>
+
+For Deep Friendships or Relationships: Symbolizes loyalty and constancy.<br>
+
+As a Magical Gesture: For dreamers, poets, or someone you admire.<br>
+
+During New Beginnings: A token of hope and fresh starts.<br>
+      </div>
+    </div>
+       <div class="card">
+      <img src="rose.jpeg" alt="image"  class="card-img">
+      <div class="card-body">
+        <h1 class="card-tittle">🔔 Bluebell – Symbol of Humility & Loyalty</h1>
+        <p class="card-sub-tittle">“Bluebells ring with humility, gratitude, and loyal love.”</p>
+        <p class="card-info">🌿 Origin & History <br>
+
+Native to Western Europe, especially the woodlands of the UK, Spain, and France.<br>
+
+In folklore, bluebells were called “fairy flowers,” believed to ring and summon fairies.</p>
+   <p class="symbolize">🎁 When You Give Bluebells<br>
+
+To Express Gratitude: A gentle way of saying “thank you” with humility.<br>
+
+For Deep Friendships or Relationships: Symbolizes loyalty and constancy.<br>
+
+As a Magical Gesture: For dreamers, poets, or someone you admire.<br>
+
+During New Beginnings: A token of hope and fresh starts.<br>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

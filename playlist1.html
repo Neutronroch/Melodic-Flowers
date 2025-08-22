@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Melodic Flower — Spotify Playlist</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      background: linear-gradient(135deg, #ebd90cca, #e0f7fa);
+      overflow: hidden;
+      
+    }
+    h1 {
+      margin: 20px 0;
+      color: #d6c033;
+      border: 2px solid pink;
+      background-color: #693004be;
+      border-radius: 10px;
+      font-family: 'dancing script', cursive;
+    }
+    iframe {
+      margin: 20px auto;
+      display: block;
+      border-radius: 12px;
+    }
+    .flower {
+      position: fixed;
+      top: -50px;
+      font-size: 24px;
+      animation: fall linear infinite;
+    }
+    @keyframes fall {
+      to {
+        transform: translateY(110vh);
+      }
+    }
+    footer {
+            background-color: #f8f4f0;
+            text-align: center;
+            padding: 20px;
+            font-family: 'Cursive', sans-serif;
+            color: #555;
+        }
+
+        footer a {
+            color: #ff69b4;
+            text-decoration: none;
+        }
+
+        footer p a { color: #555; }
+        .main-area{
+           background-image: url(sun.jpg);
+           background-size: cover;
+
+
+
+
+
+        }
+  </style>
+</head>
+<body>  
+    <div class="main-area"></div>
+  <h1>🎶 Melodic Flower Spotify Playlist 🎶</h1>
+
+  <!-- Your Spotify Playlist Embed -->
+  <iframe style="border-radius:12px" 
+    src="https://open.spotify.com/embed/playlist/3aK2aE41gm3Q8aoxdPCbWP?utm_source=generator" 
+    width="80%" height="400" frameborder="0" 
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+    loading="lazy">
+  </iframe>
+
+  <script>
+    function createFlower() {
+      const flower = document.createElement("div");
+      flower.classList.add("flower");
+      flower.innerHTML = "🌻"; 
+      flower.style.left = Math.random() * 100 + "vw";
+      flower.style.animationDuration = (3 + Math.random() * 3) + "s"; 
+      document.body.appendChild(flower);
+
+      setTimeout(() => {
+        flower.remove();
+      }, 6000);
+    }
+    setInterval(createFlower, 500);
+  </script>
+ <footer>
+        <p>🌸 &copy; 2025 <strong>Melodic Flower</strong>. All Rights Reserved.</p>
+        <p>Follow us on <a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">Twitter</a></p>
+        <p><a href="about.html">About Us</a> | <a href="future.html">Future Plans</a> | <a href="contact.html">Contact</a></p>
+    </footer>
+    </div>
+</body>
+</html>
